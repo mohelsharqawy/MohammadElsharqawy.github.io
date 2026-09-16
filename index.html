@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mohammad Elsharqawy</title>
+  <meta name="description" content="Mohammad Elsharqawy — Teaching Assistant and Computer Engineering researcher working on efficient, reliable, and scalable ML systems and cloud infrastructure reliability.">
+  <meta name="author" content="Mohammad Elsharqawy">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Mohammad Elsharqawy">
+  <meta property="og:description" content="Efficient, reliable, and scalable ML systems · Cloud infrastructure reliability · Agentic SRE">
+  <meta property="og:image" content="Mohammad_Elsharqawy.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231e4640'/><text x='50' y='54' font-family='Lato,Helvetica,Arial,sans-serif' font-size='42' font-weight='700' fill='%23ffffff' text-anchor='middle' dominant-baseline='central'>ME</text></svg>">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --page:#e6ebe8;
+      --col:#ffffff;
+      --fg:#2b302e;
+      --muted:#67706c;
+      --line:#e3e7e5;
+      --link:#26635a;
+      --fill:#f5f7f6;
+      --fill-accent:#ecf2ef;
+      --name:#1e4640;
+      --accent-text:#6c7772;
+      color-scheme:light;
+    }
+
+    @media (prefers-color-scheme:dark){
+      :root:not([data-theme="light"]){
+        --page:#0e1211;
+        --col:#161a19;
+        --fg:#e3e7e5;
+        --muted:#98a29e;
+        --line:#272d2b;
+        --link:#6fc0ae;
+        --fill:#1b201f;
+        --fill-accent:#1a2422;
+        --name:#8fc4b6;
+        --accent-text:#98a29e;
+        color-scheme:dark;
+      }
+    }
+
+    :root[data-theme="dark"]{
+      --page:#0e1211;
+      --col:#161a19;
+      --fg:#e3e7e5;
+      --muted:#98a29e;
+      --line:#272d2b;
+      --link:#6fc0ae;
+      --fill:#1b201f;
+      --fill-accent:#1a2422;
+      --name:#8fc4b6;
+      --accent-text:#98a29e;
+      color-scheme:dark;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      padding:0;
+      font-family:Lato,"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+      font-size:16px;
+      line-height:1.6;
+      color:var(--fg);
+      background:var(--page);
+      -webkit-font-smoothing:antialiased;
+    }
+    .container{
+      max-width:800px;
+      min-height:100vh;
+      margin:auto;
+      padding:28px 24px 40px;
+      background:var(--col);
+    }
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    a:focus-visible,button:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+
+    header{border-bottom:2px solid var(--line);padding-bottom:20px;margin-bottom:20px}
+    .head{display:flex;gap:24px;align-items:center;margin-bottom:16px}
+    .portrait{
+      position:relative;
+      width:200px;
+      height:200px;
+      flex:0 0 200px;
+      overflow:hidden;
+      display:grid;
+      place-items:center;
+      background:var(--fill-accent);
+      color:var(--name);
+      font-size:2.6rem;
+      font-weight:700;
+    }
+    .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+    h1{font-size:2rem;font-weight:700;line-height:1.15;margin:0 0 6px;color:var(--name)}
+    .affil{color:var(--accent-text);margin:0}
+    .affil + .affil{margin-top:2px}
+    .intro{margin:0 0 12px}
+    .contact{margin:12px 0 0;color:var(--muted);font-size:.95rem}
+    .status{margin:9px 0 0;color:var(--muted);font-size:.92rem}
+
+    main section{scroll-margin-top:20px}
+    h2{font-size:1.3rem;font-weight:700;margin:28px 0 12px;color:var(--fg)}
+    h3{font-size:1rem;margin:0;font-weight:700}
+    p{margin:0 0 12px}
+    ul{list-style:none;padding:0;margin:0 0 12px}
+    li{margin-bottom:10px;padding:8px 12px;background:var(--fill)}
+    li:last-child{margin-bottom:0}
+    ul ul{margin:6px 0 0}
+    ul ul li{background:transparent;padding:2px 0;margin-bottom:2px;list-style:disc inside}
+
+    .muted,.date{color:var(--muted);font-weight:400}
+    .item,.highlight{
+      padding:10px 12px;
+      margin:0 0 10px;
+      background:var(--fill);
+    }
+    .highlight{background:var(--fill-accent)}
+    .item > .title,.highlight > .title{font-weight:700}
+    .meta{color:var(--muted);font-size:.9rem;margin:2px 0 5px}
+    .item p,.highlight p{margin:5px 0 0}
+    .item ul,.highlight ul{margin:6px 0 0}
+    .item li,.highlight li{background:transparent;padding:2px 0;margin-bottom:2px;list-style:disc inside}
+    .links{margin-top:6px;font-size:.93rem}
+    .tech{color:var(--muted);font-size:.9rem;margin-top:5px}
+    code{
+      padding:.08em .28em;
+      border:1px solid var(--line);
+      border-radius:3px;
+      background:var(--col);
+      color:var(--fg);
+      font-size:.88em;
+    }
+
+    .compact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .compact-grid .item{margin:0}
+
+    footer{
+      margin-top:32px;
+      padding-top:16px;
+      border-top:2px solid var(--line);
+      color:var(--muted);
+      font-size:.88rem;
+    }
+    footer p{margin:0 0 5px}
+
+    #theme-toggle{
+      position:fixed;
+      top:16px;
+      right:16px;
+      width:34px;
+      height:34px;
+      padding:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:var(--col);
+      color:var(--muted);
+      border:1px solid var(--line);
+      border-radius:6px;
+      cursor:pointer;
+      line-height:1;
+      font-size:15px;
+      transition:color .15s ease,border-color .15s ease;
+    }
+    #theme-toggle:hover{color:var(--fg);border-color:var(--muted)}
+    #theme-toggle .moon{display:none}
+    :root[data-theme="dark"] #theme-toggle .sun{display:none}
+    :root[data-theme="dark"] #theme-toggle .moon{display:block}
+    @media (prefers-color-scheme:dark){
+      :root:not([data-theme="light"]) #theme-toggle .sun{display:none}
+      :root:not([data-theme="light"]) #theme-toggle .moon{display:block}
+    }
+
+    @media (max-width:640px){
+      .container{padding:24px 18px 40px}
+      .head{gap:16px;align-items:flex-start;flex-wrap:wrap}
+      .portrait{width:130px;height:130px;flex-basis:130px;font-size:2rem}
+      h1{font-size:1.6rem}
+      .compact-grid{grid-template-columns:1fr}
+    }
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{
+      body{background:#fff}
+      .container{max-width:none;padding:0}
+      a{color:var(--fg)}
+      #theme-toggle{display:none}
+      li,.item,.highlight{background:transparent;padding:2px 0}
+      .compact-grid{display:block}
+      .compact-grid .item{margin-bottom:8px}
+    }
+  </style>
+
+  <script>
+    try{
+      var savedTheme=localStorage.getItem("theme");
+      if(savedTheme) document.documentElement.setAttribute("data-theme",savedTheme);
+    }catch(error){}
+  </script>
+</head>
+
+<body>
+  <button id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle theme">
+    <span class="sun" aria-hidden="true">☾</span>
+    <span class="moon" aria-hidden="true">☀</span>
+  </button>
+
+  <div class="container">
+    <header>
+      <div class="head">
+        <div class="portrait" aria-hidden="true">
+          <span>ME</span>
+          <img src="Mohammad_Elsharqawy.jpg" alt="" onerror="this.style.display='none'">
+        </div>
+        <div>
+          <h1>Mohammad Elsharqawy</h1>
+          <p class="affil">Teaching Assistant and M.Sc. Student in Computer Engineering</p>
+          <p class="affil">Tanta University, Egypt</p>
+        </div>
+      </div>
+
+      <p class="intro">
+        I am a full-time Teaching Assistant at Tanta University and an M.Sc. student in Computer Engineering.
+        My research focuses on efficient and sustainable computing systems for AI and machine learning,
+        particularly context-aware optimization for generative-AI inference and memory-centric computing.
+      </p>
+      <p class="intro">
+        I previously worked with <a target="_blank" rel="noopener">Prof. Tianyin Xu</a>
+        at the University of Illinois Urbana-Champaign on system reliability and agentic SRE. My current M.Sc.
+        research studies robustness under distribution shift in medical imaging.
+      </p>
+
+      <p class="contact">
+        <a href="mailto:mohammadelsharqawyegy@gmail.com">mohammadelsharqawyegy at gmail.com</a> ·
+        <a href="https://drive.google.com/file/d/1WrRoNnq7aiswBOVURMIyg1x-JyBoP5Ha/view?usp=sharing" target="_blank" rel="noopener">CV</a> ·
+        <a href="https://github.com/MohammadElsharqawy" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/mohammad-elsharqawy-a86991190/" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="https://leetcode.com/u/__sharq1/" target="_blank" rel="noopener">LeetCode</a>
+      </p>
+      <p class="status">Seeking Ph.D. opportunities in computer systems and ML systems.</p>
+    </header>
+
+    <main>
+      <section id="education">
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <strong>Tanta University</strong>
+            <span class="date">— M.Sc. in Computer Engineering, September 2024–June 2027 (expected)</span><br>
+            GPA: 3.78/4.00<br>
+            <span class="muted">Advanced Distributed Systems, Wireless Networks, Advanced Image Processing,
+              Natural Computing, and Simulation Techniques; currently at the thesis stage.</span><br>
+            <strong>Thesis:</strong> Domain generalization for diabetic-retinopathy grading under changes in
+            camera hardware, acquisition protocols, and patient demographics. Advised by Prof. Mohamed T. Faheem Saidahmd.
+          </li>
+          <li>
+            <strong>Tanta University</strong>
+            <span class="date">— B.Sc. in Computer Engineering and Automatic Control, October 2018–June 2023</span><br>
+            Excellent with honors · Ranked 4th of 150+ students<br>
+            <span class="muted">Selected for a full-time, permanent Teaching Assistant appointment awarded to top graduates.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="interests">
+        <h2>Research Interests</h2>
+        <p>
+          I am interested in <strong>efficient and sustainable computing systems for AI and machine learning</strong>,
+          especially hardware-software co-design across compilers, runtimes, and architectures. I want to make
+          generative-AI inference faster, more scalable, and more energy-efficient through context-aware optimization
+          and memory-centric system design.
+        </p>
+        <p>
+          A complementary part of my work concerns <strong>system reliability</strong> and <strong>agentic SRE</strong>:
+          translating real production incidents into high-fidelity failure scenarios and studying how LLM-based agents
+          diagnose and mitigate faults in cloud-native systems.
+        </p>
+        <p>
+          My M.Sc. thesis examines another form of robustness: why diabetic-retinopathy models trained on one fundus
+          imaging source degrade on another, and how representation learning can improve generalization without
+          target-domain labels.
+        </p>
+      </section>
+
+      <section id="contributions">
+        <h2>Open-Source Contributions</h2>
+        <p>
+          Three merged contributions to open systems-research infrastructure.
+        </p>
+
+        <article class="highlight">
+          <div class="meta">libCacheSim · High-performance cache library and simulator · Merged PR #318</div>
+          <div class="title">MultiQueue cache-eviction algorithm</div>
+          <p>
+            Implemented the MultiQueue (MQ) eviction algorithm in C from Zhou, Philbin, and Li's USENIX ATC 2001
+            paper. The implementation combines frequency-indexed LRU queues, time-based demotion, and a FIFO ghost
+            buffer that preserves object frequency across evictions.
+          </p>
+          <ul>
+            <li>Added approximately 550 lines of implementation and tests to a simulator used by around 100 research institutions and companies.</li>
+            <li>Verified that MQ with one queue reproduces LRU exactly, including identical miss and byte-miss ratios.</li>
+            <li>Benchmarked MQ against FIFO, LRU, TwoQ, SLRU, ARC, SIEVE, and S3FIFO across multiple traces and cache sizes.</li>
+          </ul>
+          <p class="links">
+            <a href="https://github.com/1a1a11a/libCacheSim/pull/318" target="_blank" rel="noopener">[pull request]</a>
+            <a href="https://github.com/1a1a11a/libCacheSim/issues/140" target="_blank" rel="noopener">[issue]</a>
+          </p>
+        </article>
+
+        <p>
+          The following two fault scenarios are merged into
+          <a href="https://github.com/SREGym/SREGym" target="_blank" rel="noopener">SREGym</a>,
+          an open benchmark for evaluating whether AI agents can diagnose and resolve production incidents.
+        </p>
+
+        <article class="highlight">
+          <div class="meta">SREGym · System reliability and agentic SRE · Merged PR #774</div>
+          <div class="title">GKE ran out of IP addresses</div>
+          <p>
+            Reproduced a real GKE IP-exhaustion outage as a deterministic Kubernetes fault. The scenario uses Calico
+            IPAM and strict affinity to exhaust an intentionally constrained address pool, leaving application pods
+            stuck in <code>ContainerCreating</code> while an AI SRE agent diagnoses and mitigates the incident.
+          </p>
+          <ul>
+            <li>Designed the fault to trigger at runtime without cluster-wide reconfiguration.</li>
+            <li>Added repeatable setup and cleanup paths that restore cluster networking after each run.</li>
+            <li>Evaluated the Stratus agent and refined the mitigation to expose cross-namespace reasoning behavior.</li>
+          </ul>
+          <p class="links">
+            <a href="https://github.com/SREGym/SREGym/pull/774" target="_blank" rel="noopener">[pull request]</a>
+            <a href="https://deploy.live/blog/when-gke-ran-out-of-ip-addresses/" target="_blank" rel="noopener">[incident]</a>
+          </p>
+        </article>
+
+        <article class="highlight">
+          <div class="meta">SREGym · System reliability and agentic SRE · Merged PR #791</div>
+          <div class="title">Feature-flag latent bug in the Hotel Reservation application</div>
+          <p>
+            Modeled Fastly's 2021 global outage through a configuration flag that activates a dormant failure path.
+            The <code>/hotels</code> endpoint returns HTTP 500 errors under load while every Kubernetes pod remains
+            healthy, forcing the agent to connect a configuration change to a service-level failure.
+          </p>
+          <ul>
+            <li>Built the failure into a custom multi-architecture frontend image.</li>
+            <li>Implemented a reversible ConfigMap trigger and an HTTP-probe mitigation oracle.</li>
+            <li>Hardened the scenario through maintainer review for deterministic and auditable execution.</li>
+          </ul>
+          <p class="links">
+            <a href="https://github.com/SREGym/SREGym/pull/791" target="_blank" rel="noopener">[pull request]</a>
+            <a href="https://www.fastly.com/blog/summary-of-june-8-outage" target="_blank" rel="noopener">[incident]</a>
+          </p>
+        </article>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+
+        <article class="item">
+          <div class="title">Research Assistant, Tanta University <span class="date">(October 2025–present)</span></div>
+          <div class="meta">Robustness under distribution shift · Advised by Prof. Mohamed T. Faheem Saidahmd</div>
+          <ul>
+            <li>Investigate domain generalization for diabetic-retinopathy grading across camera hardware, acquisition protocols, and patient demographics.</li>
+            <li>Study representation-learning strategies that reduce cross-domain degradation without using target-domain labels; this work forms the basis of my M.Sc. thesis.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="title">Research Intern, University of Illinois Urbana-Champaign <span class="date">(May–August 2026)</span></div>
+          <div class="meta">System Reliability and Agentic SRE · Remote · Advised by Prof. Tianyin Xu</div>
+          <ul>
+            <li>Investigated how LLM-based SRE agents diagnose and remediate realistic failures in cloud-native systems.</li>
+            <li>Studied how real production incidents can be translated into reproducible SREGym scenarios while preserving their causal structure and diagnostic difficulty.</li>
+            <li>Evaluated agents on realistic failure scenarios and identified limitations in cross-namespace reasoning and configuration-to-symptom correlation.</li>
+            <li>Analyzed large-scale cloud-outage postmortems to determine which failure mechanisms project faithfully into benchmark environments.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="title">Teaching Assistant, Tanta University <span class="date">(September 2024–present)</span></div>
+          <div class="meta">Computer Engineering and Artificial Intelligence Departments</div>
+          <p>Lead instruction across the undergraduate curriculum, including:</p>
+          <ul>
+            <li>Machine Learning — Spring 2026</li>
+            <li>Artificial Intelligence — Spring 2025 and 2026</li>
+            <li>Operating Systems — Fall 2024 and 2025</li>
+            <li>Data Structures and Algorithms — Fall 2024 and 2025</li>
+            <li>Object-Oriented Programming — Spring 2025</li>
+            <li>Structural Programming with Python and C++ — 2024–2025</li>
+            <li>Coached 11 teams at the 2023 Egyptian Collegiate Programming Contest, six as head coach.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="title">AI, Data Science, and Cloud Engineer Trainee <span class="date">(January–September 2024)</span></div>
+          <div class="meta">Digital Egypt Builders Initiative, Cairo</div>
+          <p>Completed intensive training in artificial intelligence, data science, and cloud engineering through Egypt's national digital-talent initiative.</p>
+        </article>
+
+        <article class="item">
+          <div class="title">Software Engineering Intern, Ithra Services Ltd <span class="date">(July–September 2022)</span></div>
+          <ul>
+            <li>Engineered RESTful APIs with MongoDB CRUD models and documented them with JSON Schema and Postman.</li>
+            <li>Implemented JWT authentication, payment hooks, and Docker-based service packaging.</li>
+            <li>Automated AWS EC2 deployments with GitHub Actions and Ansible.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="projects">
+        <h2>Selected Systems Projects</h2>
+
+        <article class="item">
+          <div class="title">Kubernetes GitOps Deployment</div>
+          <p>Containerized a Go application and deployed it with Argo CD, using Git as the source of truth for reproducible and self-healing Kubernetes deployments.</p>
+          <div class="tech">Go · Docker · Kubernetes · Argo CD · Minikube</div>
+          <p class="links"><a href="https://github.com/MohammadElsharqawy/Argocd-Demo-Project" target="_blank" rel="noopener">[code]</a></p>
+        </article>
+
+        <article class="item">
+          <div class="title">CI/CD Pipeline for Vprofile</div>
+          <p>Built an end-to-end Jenkins pipeline with Maven testing, SonarQube quality gates, Nexus artifacts, Docker images, AWS ECS delivery, and Slack notifications.</p>
+          <div class="tech">Jenkins · Maven · SonarQube · Nexus · Docker · AWS ECS</div>
+          <p class="links"><a href="https://github.com/MohammadElsharqawy/Vprofile-Jenkins-CI-CD" target="_blank" rel="noopener">[code]</a></p>
+        </article>
+
+        <article class="item">
+          <div class="title">Microservices on Kubernetes — Weather Application</div>
+          <p>Deployed a multi-service application with a StatefulSet, persistent volumes, ConfigMaps, Secrets, health probes, and NGINX Ingress with TLS.</p>
+          <div class="tech">Kubernetes · StatefulSet · NGINX Ingress · MySQL · TLS</div>
+          <p class="links"><a href="https://github.com/MohammadElsharqawy/weatherapp-on-K8S" target="_blank" rel="noopener">[code]</a></p>
+        </article>
+
+        <article class="item">
+          <div class="title">Automated Infrastructure and Delivery Pipeline</div>
+          <p>Provisioned AWS infrastructure with Terraform and automated private-host configuration and Node.js delivery using Jenkins, Ansible, a bastion host, and an Application Load Balancer.</p>
+          <div class="tech">Terraform · Jenkins · Ansible · AWS · Node.js</div>
+          <p class="links"><a href="https://github.com/MohammadElsharqawy/Automated-CI-CD-with-Jenkins-Terraform-and-Ansible" target="_blank" rel="noopener">[code]</a></p>
+        </article>
+
+        <article class="item">
+          <div class="title">AWS Multi-Tier Web Application</div>
+          <p>Designed a highly available architecture with end-to-end HTTPS, an auto-scaling Tomcat tier, private DNS service discovery, and isolated security groups over MySQL, Memcached, and RabbitMQ.</p>
+          <div class="tech">EC2 · ALB · Auto Scaling · Route 53 · ACM</div>
+        </article>
+
+        <article class="item">
+          <div class="title">End-to-End Medical Chatbot</div>
+          <p>Developed a Flask RAG application using Sentence-BERT embeddings, Pinecone, and GPT-4o, then containerized and delivered it to AWS through GitHub Actions.</p>
+          <div class="tech">LangChain · Pinecone · GPT-4o · Flask · Docker · AWS</div>
+          <p class="links"><a href="https://github.com/MohammadElsharqawy/End-To-End-Medical-Chatbot" target="_blank" rel="noopener">[code]</a></p>
+        </article>
+      </section>
+
+      <section id="replications">
+        <h2>Research Replications and AI Projects</h2>
+        <p>
+          I implement foundational models from scratch in PyTorch to understand their equations and architecture,
+          rather than using them only through high-level APIs.
+          <a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects" target="_blank" rel="noopener">[repository]</a>
+        </p>
+
+        <div class="highlight">
+          <div class="title">Deep Learning from Scratch</div>
+          <ul>
+            <li><a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects/blob/main/Transformer-architecture/transfomer-architecture-using-Pytorch.py" target="_blank" rel="noopener">Transformer architecture</a> — multi-head attention, positional encoding, and encoder-decoder stacks.</li>
+            <li><a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects/blob/main/ResNet%7B50%2C%20101%2C%20152%7D_from_scratch_on_Cats_%26_Dogs_Dataset_Pytorch.ipynb" target="_blank" rel="noopener">ResNet-50/101/152</a> — residual bottleneck networks trained on Cats vs. Dogs.</li>
+            <li><a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects/blob/main/AexNet_from_scratch_on_Cats_%26_Dogs_Dataset_Pytorch.ipynb" target="_blank" rel="noopener">AlexNet</a> — original CNN architecture implemented and trained end to end.</li>
+            <li><a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects/blob/main/RNN%26LSTM%20and%20their%20variants/RNN%20%26%20LSTM%20(Vanila%2C%20Coupled%2C%20Peephole)%20From%20scratch.ipynb" target="_blank" rel="noopener">RNN and LSTM variants</a> — vanilla, coupled input-forget, and peephole cells.</li>
+          </ul>
+        </div>
+
+        <div class="highlight">
+          <div class="title">Representations and Language Models</div>
+          <ul>
+            <li><a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects/tree/main/Word2Vec" target="_blank" rel="noopener">Word2Vec</a> — skip-gram with negative sampling.</li>
+            <li><a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects/blob/main/Glove/GloVe-%20from%20Sctarch.ipynb" target="_blank" rel="noopener">GloVe</a> — co-occurrence matrix factorization into dense embeddings.</li>
+            <li>BERT fine-tuning for <a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects/blob/main/Fine-Tune%20Bert%20for%20Multi-Class%20Classification.ipynb" target="_blank" rel="noopener">multi-class classification</a>, <a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects/blob/main/Fine-tune%20BERT%20for%20Sentiment%20Analysis.ipynb" target="_blank" rel="noopener">sentiment analysis</a>, and <a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects/blob/main/Fine-tuning%20the%20BERT%20model%20for%20sentence-pair.ipynb" target="_blank" rel="noopener">sentence-pair inference</a>.</li>
+          </ul>
+        </div>
+
+        <div class="highlight">
+          <div class="title">Classical AI, Systems, and Backend</div>
+          <ul>
+            <li><a href="https://github.com/MohammadElsharqawy/AI" target="_blank" rel="noopener">Search-based 8-Puzzle agents</a> using BFS, DFS, uniform-cost, greedy, and A* search.</li>
+            <li><a href="https://github.com/MohammadElsharqawy/Travelling-Salesman-Problem-with-Genetic-Algorithm" target="_blank" rel="noopener">Travelling Salesman Problem</a> approximated with a genetic algorithm.</li>
+            <li>Networking demonstrations using <a href="https://github.com/MohammadElsharqawy/Python-Socket-Chat" target="_blank" rel="noopener">Python sockets</a> and <a href="https://github.com/MohammadElsharqawy/Chatroom-RPC-pooling-based" target="_blank" rel="noopener">Go RPC connection pooling</a>.</li>
+            <li><a href="https://github.com/MohammadElsharqawy/E-commerce-web-app-backend" target="_blank" rel="noopener">E-commerce backend</a> built with Node.js, Express, and MongoDB.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="compact-grid">
+          <div class="item">
+            <div class="title">Systems and Infrastructure</div>
+            <p>Linux processes, syscalls, and memory management · Kubernetes · Docker · Terraform · Ansible · Jenkins · GitHub Actions · Argo CD · Helm · Calico CNI · Git</p>
+          </div>
+          <div class="item">
+            <div class="title">Programming Languages</div>
+            <p>Python · C/C++ · Go · Java · JavaScript · Bash · VHDL</p>
+          </div>
+          <div class="item">
+            <div class="title">Machine Learning</div>
+            <p>PyTorch · TensorFlow · Scikit-learn · Transformers · LLMs · RAG · LoRA · Fine-tuning · Quantization · ONNX Runtime · MLflow</p>
+          </div>
+          <div class="item">
+            <div class="title">Backend and Data</div>
+            <p>MySQL · MongoDB · Pinecone · Flask · Node.js · RESTful APIs · RPC</p>
+          </div>
+          <div class="item">
+            <div class="title">Cloud and Observability</div>
+            <p>AWS EC2 · ECS · ECR · S3 · ALB · Route 53 · Prometheus · Grafana · Elasticsearch · Fluent Bit · Kibana · Jaeger</p>
+          </div>
+          <div class="item">
+            <div class="title">Languages</div>
+            <p>Arabic — native · English — professional working proficiency</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="awards">
+        <h2>Awards and Achievements</h2>
+        <ul>
+          <li><strong>4th of 150+ students</strong> — graduating class, Tanta University; Excellent with honors.</li>
+          <li><strong>Top Students Financial Award</strong> — Tanta University, 2019–2023.</li>
+          <li><strong>ACM-ICPC ECPC Finalist</strong> — 2021 and 2022.</li>
+          <li><strong>2nd place</strong> — Tanta University Collegiate Programming Contest, 2021 and 2022; 8th place in 2020.</li>
+          <li><strong>Digital Egypt Builders Initiative</strong> — selected for the competitive national graduate program in 2024.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Mohammad Elsharqawy ·
+        <a href="mailto:mohammadelsharqawyegy@gmail.com">Email</a> ·
+        <a href="tel:+201018424238">Phone</a> ·
+        <a href="https://github.com/MohammadElsharqawy" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/mohammad-elsharqawy-a86991190/" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+      <p>New Administrative Capital, Egypt · © 2026 Mohammad Elsharqawy</p>
+    </footer>
+  </div>
+
+  <script>
+    (function(){
+      var root=document.documentElement;
+      var button=document.getElementById("theme-toggle");
+      var media=window.matchMedia("(prefers-color-scheme: dark)");
+
+      function isDark(){
+        var theme=root.getAttribute("data-theme");
+        return theme ? theme === "dark" : media.matches;
+      }
+
+      function syncLabel(){
+        button.setAttribute("aria-label",isDark() ? "Switch to light theme" : "Switch to dark theme");
+      }
+
+      button.addEventListener("click",function(){
+        var next=isDark() ? "light" : "dark";
+        root.setAttribute("data-theme",next);
+        try{localStorage.setItem("theme",next)}catch(error){}
+        syncLabel();
+      });
+
+      if(media.addEventListener) media.addEventListener("change",syncLabel);
+      else if(media.addListener) media.addListener(syncLabel);
+      syncLabel();
+    })();
+  </script>
+</body>
+</html>
