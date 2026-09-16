@@ -430,20 +430,17 @@
       </section>
 
       <section id="projects">
-        <h2>Selected Systems Projects</h2>
+        <h2>Selected Projects</h2>
 
-        <article class="item">
-          <div class="title">Kubernetes GitOps Deployment</div>
-          <p>Containerized a Go application and deployed it with Argo CD, using Git as the source of truth for reproducible and self-healing Kubernetes deployments.</p>
-          <div class="tech">Go · Docker · Kubernetes · Argo CD · Minikube</div>
-          <p class="links"><a href="https://github.com/MohammadElsharqawy/Argocd-Demo-Project" target="_blank" rel="noopener">[code]</a></p>
-        </article>
-
-        <article class="item">
-          <div class="title">CI/CD Pipeline for Vprofile</div>
-          <p>Built an end-to-end Jenkins pipeline with Maven testing, SonarQube quality gates, Nexus artifacts, Docker images, AWS ECS delivery, and Slack notifications.</p>
-          <div class="tech">Jenkins · Maven · SonarQube · Nexus · Docker · AWS ECS</div>
-          <p class="links"><a href="https://github.com/MohammadElsharqawy/Vprofile-Jenkins-CI-CD" target="_blank" rel="noopener">[code]</a></p>
+        <article class="highlight">
+          <div class="title">Paper Replications — Deep Learning Architectures from Scratch</div>
+          <p>
+            Reimplemented foundational architectures from their original papers in PyTorch, including the
+            Transformer, ResNet-50/101/152, AlexNet, and several RNN/LSTM variants. I also implemented Word2Vec
+            and GloVe from scratch and fine-tuned BERT for classification, sentiment analysis, and sentence-pair inference.
+          </p>
+          <div class="tech">PyTorch · Transformers · CNNs · Recurrent Networks · Representation Learning</div>
+          <p class="links"><a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects" target="_blank" rel="noopener">[repository]</a></p>
         </article>
 
         <article class="item">
@@ -454,62 +451,18 @@
         </article>
 
         <article class="item">
+          <div class="title">Kubernetes GitOps Deployment</div>
+          <p>Containerized a Go application and deployed it with Argo CD, using Git as the source of truth for reproducible and self-healing Kubernetes deployments.</p>
+          <div class="tech">Go · Docker · Kubernetes · Argo CD · Minikube</div>
+          <p class="links"><a href="https://github.com/MohammadElsharqawy/Argocd-Demo-Project" target="_blank" rel="noopener">[code]</a></p>
+        </article>
+
+        <article class="item">
           <div class="title">Automated Infrastructure and Delivery Pipeline</div>
           <p>Provisioned AWS infrastructure with Terraform and automated private-host configuration and Node.js delivery using Jenkins, Ansible, a bastion host, and an Application Load Balancer.</p>
           <div class="tech">Terraform · Jenkins · Ansible · AWS · Node.js</div>
           <p class="links"><a href="https://github.com/MohammadElsharqawy/Automated-CI-CD-with-Jenkins-Terraform-and-Ansible" target="_blank" rel="noopener">[code]</a></p>
         </article>
-
-        <article class="item">
-          <div class="title">AWS Multi-Tier Web Application</div>
-          <p>Designed a highly available architecture with end-to-end HTTPS, an auto-scaling Tomcat tier, private DNS service discovery, and isolated security groups over MySQL, Memcached, and RabbitMQ.</p>
-          <div class="tech">EC2 · ALB · Auto Scaling · Route 53 · ACM</div>
-        </article>
-
-        <article class="item">
-          <div class="title">End-to-End Medical Chatbot</div>
-          <p>Developed a Flask RAG application using Sentence-BERT embeddings, Pinecone, and GPT-4o, then containerized and delivered it to AWS through GitHub Actions.</p>
-          <div class="tech">LangChain · Pinecone · GPT-4o · Flask · Docker · AWS</div>
-          <p class="links"><a href="https://github.com/MohammadElsharqawy/End-To-End-Medical-Chatbot" target="_blank" rel="noopener">[code]</a></p>
-        </article>
-      </section>
-
-      <section id="replications">
-        <h2>Research Replications and AI Projects</h2>
-        <p>
-          I implement foundational models from scratch in PyTorch to understand their equations and architecture,
-          rather than using them only through high-level APIs.
-          <a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects" target="_blank" rel="noopener">[repository]</a>
-        </p>
-
-        <div class="highlight">
-          <div class="title">Deep Learning from Scratch</div>
-          <ul>
-            <li><a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects/blob/main/Transformer-architecture/transfomer-architecture-using-Pytorch.py" target="_blank" rel="noopener">Transformer architecture</a> — multi-head attention, positional encoding, and encoder-decoder stacks.</li>
-            <li><a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects/blob/main/ResNet%7B50%2C%20101%2C%20152%7D_from_scratch_on_Cats_%26_Dogs_Dataset_Pytorch.ipynb" target="_blank" rel="noopener">ResNet-50/101/152</a> — residual bottleneck networks trained on Cats vs. Dogs.</li>
-            <li><a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects/blob/main/AexNet_from_scratch_on_Cats_%26_Dogs_Dataset_Pytorch.ipynb" target="_blank" rel="noopener">AlexNet</a> — original CNN architecture implemented and trained end to end.</li>
-            <li><a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects/blob/main/RNN%26LSTM%20and%20their%20variants/RNN%20%26%20LSTM%20(Vanila%2C%20Coupled%2C%20Peephole)%20From%20scratch.ipynb" target="_blank" rel="noopener">RNN and LSTM variants</a> — vanilla, coupled input-forget, and peephole cells.</li>
-          </ul>
-        </div>
-
-        <div class="highlight">
-          <div class="title">Representations and Language Models</div>
-          <ul>
-            <li><a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects/tree/main/Word2Vec" target="_blank" rel="noopener">Word2Vec</a> — skip-gram with negative sampling.</li>
-            <li><a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects/blob/main/Glove/GloVe-%20from%20Sctarch.ipynb" target="_blank" rel="noopener">GloVe</a> — co-occurrence matrix factorization into dense embeddings.</li>
-            <li>BERT fine-tuning for <a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects/blob/main/Fine-Tune%20Bert%20for%20Multi-Class%20Classification.ipynb" target="_blank" rel="noopener">multi-class classification</a>, <a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects/blob/main/Fine-tune%20BERT%20for%20Sentiment%20Analysis.ipynb" target="_blank" rel="noopener">sentiment analysis</a>, and <a href="https://github.com/MohammadElsharqawy/Paper-Replications-AI-Projects/blob/main/Fine-tuning%20the%20BERT%20model%20for%20sentence-pair.ipynb" target="_blank" rel="noopener">sentence-pair inference</a>.</li>
-          </ul>
-        </div>
-
-        <div class="highlight">
-          <div class="title">Classical AI, Systems, and Backend</div>
-          <ul>
-            <li><a href="https://github.com/MohammadElsharqawy/AI" target="_blank" rel="noopener">Search-based 8-Puzzle agents</a> using BFS, DFS, uniform-cost, greedy, and A* search.</li>
-            <li><a href="https://github.com/MohammadElsharqawy/Travelling-Salesman-Problem-with-Genetic-Algorithm" target="_blank" rel="noopener">Travelling Salesman Problem</a> approximated with a genetic algorithm.</li>
-            <li>Networking demonstrations using <a href="https://github.com/MohammadElsharqawy/Python-Socket-Chat" target="_blank" rel="noopener">Python sockets</a> and <a href="https://github.com/MohammadElsharqawy/Chatroom-RPC-pooling-based" target="_blank" rel="noopener">Go RPC connection pooling</a>.</li>
-            <li><a href="https://github.com/MohammadElsharqawy/E-commerce-web-app-backend" target="_blank" rel="noopener">E-commerce backend</a> built with Node.js, Express, and MongoDB.</li>
-          </ul>
-        </div>
       </section>
 
       <section id="skills">
