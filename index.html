@@ -12,52 +12,52 @@
   <meta property="og:description" content="Efficient, reliable, and scalable ML systems · Cloud infrastructure reliability · Agentic SRE">
   <meta property="og:image" content="Mohammad_Elsharqawy.jpg">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231e4640'/><text x='50' y='54' font-family='Lato,Helvetica,Arial,sans-serif' font-size='42' font-weight='700' fill='%23ffffff' text-anchor='middle' dominant-baseline='central'>ME</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231d5368'/><text x='50' y='54' font-family='Lato,Helvetica,Arial,sans-serif' font-size='42' font-weight='700' fill='%23ffffff' text-anchor='middle' dominant-baseline='central'>ME</text></svg>">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --page:#e6ebe8;
+      --page:#e5edf1;
       --col:#ffffff;
-      --fg:#2b302e;
-      --muted:#67706c;
-      --line:#e3e7e5;
-      --link:#26635a;
-      --fill:#f5f7f6;
-      --fill-accent:#ecf2ef;
-      --name:#1e4640;
-      --accent-text:#6c7772;
+      --fg:#263238;
+      --muted:#62757e;
+      --line:#dce6e9;
+      --link:#24667c;
+      --fill:#f4f8f9;
+      --fill-accent:#e8f1f3;
+      --name:#1d5368;
+      --accent-text:#637983;
       color-scheme:light;
     }
 
     @media (prefers-color-scheme:dark){
       :root:not([data-theme="light"]){
-        --page:#0e1211;
-        --col:#161a19;
-        --fg:#e3e7e5;
-        --muted:#98a29e;
-        --line:#272d2b;
-        --link:#6fc0ae;
-        --fill:#1b201f;
-        --fill-accent:#1a2422;
-        --name:#8fc4b6;
-        --accent-text:#98a29e;
+        --page:#0c1316;
+        --col:#141c20;
+        --fg:#e3eaed;
+        --muted:#95a7ae;
+        --line:#26343a;
+        --link:#74bbd0;
+        --fill:#1a2428;
+        --fill-accent:#18282e;
+        --name:#8fc8d8;
+        --accent-text:#98aeb5;
         color-scheme:dark;
       }
     }
 
     :root[data-theme="dark"]{
-      --page:#0e1211;
-      --col:#161a19;
-      --fg:#e3e7e5;
-      --muted:#98a29e;
-      --line:#272d2b;
-      --link:#6fc0ae;
-      --fill:#1b201f;
-      --fill-accent:#1a2422;
-      --name:#8fc4b6;
-      --accent-text:#98a29e;
+      --page:#0c1316;
+      --col:#141c20;
+      --fg:#e3eaed;
+      --muted:#95a7ae;
+      --line:#26343a;
+      --link:#74bbd0;
+      --fill:#1a2428;
+      --fill-accent:#18282e;
+      --name:#8fc8d8;
+      --accent-text:#98aeb5;
       color-scheme:dark;
     }
 
@@ -85,24 +85,30 @@
     a:focus-visible,button:focus-visible{outline:2px solid var(--link);outline-offset:3px}
 
     header{border-bottom:2px solid var(--line);padding-bottom:20px;margin-bottom:20px}
-    .head{display:flex;gap:24px;align-items:center;margin-bottom:16px}
-    .portrait{
+    .profile{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:32px;align-items:center}
+    .profile-copy{min-width:0}
+    .portrait{width:230px;margin:0}
+    .portrait-frame{
       position:relative;
-      width:200px;
-      height:200px;
-      flex:0 0 200px;
+      width:100%;
+      aspect-ratio:3/4;
       overflow:hidden;
       display:grid;
       place-items:center;
       background:var(--fill-accent);
       color:var(--name);
+      border:1px solid var(--line);
+      border-radius:12px;
+      box-shadow:0 18px 42px -32px rgba(22,61,76,.75);
       font-size:2.6rem;
       font-weight:700;
     }
-    .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-    h1{font-size:2rem;font-weight:700;line-height:1.15;margin:0 0 6px;color:var(--name)}
+    .portrait-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+    .portrait figcaption{margin-top:8px;text-align:center;color:var(--muted);font-size:.8rem}
+    h1{font-size:2.25rem;font-weight:700;line-height:1.1;margin:0 0 8px;color:var(--name)}
     .affil{color:var(--accent-text);margin:0}
     .affil + .affil{margin-top:2px}
+    .intro-copy{margin-top:20px}
     .intro{margin:0 0 12px}
     .contact{margin:12px 0 0;color:var(--muted);font-size:.95rem}
     .status{margin:9px 0 0;color:var(--muted);font-size:.92rem}
@@ -182,9 +188,12 @@
 
     @media (max-width:640px){
       .container{padding:24px 18px 40px}
-      .head{gap:16px;align-items:flex-start;flex-wrap:wrap}
-      .portrait{width:130px;height:130px;flex-basis:130px;font-size:2rem}
+      .profile{grid-template-columns:1fr;gap:20px;align-items:start}
+      .portrait{width:180px;order:-1;margin:0}
+      .portrait-frame{font-size:2rem;border-radius:10px}
+      .portrait figcaption{text-align:left}
       h1{font-size:1.6rem}
+      .intro-copy{margin-top:16px}
       .compact-grid{grid-template-columns:1fr}
     }
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -215,28 +224,34 @@
 
   <div class="container">
     <header>
-      <div class="head">
-        <div class="portrait" aria-hidden="true">
-          <span>ME</span>
-          <img src="Mohammad_Elsharqawy.jpg" alt="" onerror="this.style.display='none'">
-        </div>
-        <div>
+      <div class="profile">
+        <div class="profile-copy">
           <h1>Mohammad Elsharqawy</h1>
           <p class="affil">Teaching Assistant and M.Sc. Student in Computer Engineering</p>
           <p class="affil">Tanta University, Egypt</p>
-        </div>
-      </div>
 
-      <p class="intro">
-        I am a full-time Teaching Assistant at Tanta University and an M.Sc. student in Computer Engineering.
-        My research focuses on efficient and sustainable computing systems for AI and machine learning,
-        particularly context-aware optimization for generative-AI inference and memory-centric computing.
-      </p>
-      <p class="intro">
-        I previously worked with Prof. Tianyin Xu</a>
-        at the University of Illinois Urbana-Champaign on system reliability and agentic SRE. My current M.Sc.
-        research studies robustness under distribution shift in medical imaging.
-      </p>
+          <div class="intro-copy">
+            <p class="intro">
+              I am a full-time Teaching Assistant at Tanta University and an M.Sc. student in Computer Engineering.
+              My research focuses on efficient and sustainable computing systems for AI and machine learning,
+              particularly context-aware optimization for generative-AI inference and memory-centric computing.
+            </p>
+            <p class="intro">
+              I previously worked with Prof. Tianyin Xu</a>
+              at the University of Illinois Urbana-Champaign on system reliability and agentic SRE. My current M.Sc.
+              research studies robustness under distribution shift in medical imaging.
+            </p>
+          </div>
+        </div>
+
+        <figure class="portrait">
+          <div class="portrait-frame">
+            <span aria-hidden="true">ME</span>
+            <img src="Mohammad_Elsharqawy.jpg" alt="Mohammad Elsharqawy standing beside the Nile" onerror="this.style.display='none'">
+          </div>
+          <figcaption>Based in Egypt</figcaption>
+        </figure>
+      </div>
 
       <p class="contact">
         <a href="mailto:mohammadelsharqawyegy@gmail.com">mohammadelsharqawyegy at gmail.com</a> ·
